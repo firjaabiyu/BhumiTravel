@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="bhumi/bhumi-shortcut-logo.png" \type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Bhumi Home Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <style>
+        html {
+            overflow-x: hidden;
+            padding: 0;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="font-[Plus Jakarta Sans] overflow-hidden">
+
+
+    <div
+        class="slide z-40 md:h-[70%] h-[45%] w-full md:p-16 p-5 py-32 flex flex-col  top-[-100%] md:justify-center border-b-2 border-black fixed bg-white duration-500 ease">
+
+        <ul class="duration-200 flex md:flex-row flex-col gap-7 justify-start md:items-center ease-oute w-[90%]">
+            <div class="kiri">
+                <li class="text-black md:text-[100px] text-[30px] etc "><a href="index.html"><span
+                            class="hover:underline">Home</span></a></li>
+                <li class="text-black md:text-[100px] text-[30px] etc md:pl-10 "><a href="explore.html"><span
+                            class="hover:underline">Places</span><span class="text-[15px] md:text-[20px]">(We offer You
+                            the Best
+                            Places)</span></a></li>
+                <li class="text-black md:text-[100px] text-[30px] etc md:pl-5 "><a href=""><span
+                            class="hover:underline">Blog</span><span class="text-[15px] md:text-[20px]">(Read all Blog
+                            that we Made for
+                            You)</span></a>
+                </li>
+            </div>
+
+        </ul>
+    </div>
+    <section id="main-content" class="">
+        <!-- navbar -->
+        <div class="nav z-50 fixed bg-white w-full flex flex-col justify-center items-center pt-10">
+            <div class="nav-area w-[90%] pb-5 flex justify-between items-center border-b-2 border-black">
+                <div class="title md:block hidden">
+                    <p class="text-[25px] font-light">Bromo Trip</p>
+                </div>
+                <div class="logo">
+                    <img class="w-[150px]" src="bhumi/bhumi-logo.png" alt="">
+                </div>
+                <div class="logo">
+                    <a class="text-[25px] underline flex items-center font-light bg-black text-white cursor-pointer"
+                        onclick="onToggle(this)">
+                        Menu
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- hero -->
+        <div class="hero w-full flex justify-center items-center pt-32 md:pt-44">
+            <div class="hero-area w-[90%]">
+                <div
+                    class="welcome flex flex-col md:justify-start md:items-start md:p-20 p-5 md:gap-20 gap-7 rounded-[18px] bg-[url(bhumi/bhumi-bg-bromo.png)]">
+                    <div class="atas gap-5 flex flex-col justify-start items-start">
+                        <div
+                            class="location gap-1 flex items-center justify-center rounded-full duration-200 bg-black px-5 py-1 backdrop-blur-2xl bg-opacity-40">
+                            <span class="text-white flex justify-center items-center text-[21px]">
+                                <ion-icon name="medical"></ion-icon>
+                            </span>
+                            <p class="font-normal text-white text-[15px]">
+                                Bromo, Indonesia
+                            </p>
+                        </div>
+                        <div class="title w-full ">
+                            <p class="text-white font-semibold md:font-extrabold md:text-[47px] text-[20px]">Discover
+                                the Majestic</p>
+                            <p
+                                class=" font-extrabold text-[90px] flex gap-7 md:text-[100px] text-gradient bg-gradient-to-r from-white via-white to-[#B3B3B3] bg-clip-text text-transparent">
+                                <span class="hidden md:block">Beauty of </span>Bromo</p>
+                        </div>
+                    </div>
+                    <div
+                        class="reserve grid md:flex md:justify-end items-end bg-white py-5 md:px-7 px-3 gap-10 rounded-[21px]">
+                        <div class="tgl flex flex-col md:gap-3">
+                            <div class="date">
+                                <p class="font-bold text-[20px]">Date</p>
+                            </div>
+                            <div
+                                class=" flex md:w-[100%] w-[93%] justify-start md:justify-center items-center px-3 md:px-3 py-2 rounded-full border-2 border-black">
+                                <ion-icon class="text-[20px]" name="calendar"></ion-icon>
+                                <div class="relative px-4">
+                                    <input type="text" id="display-input" class=" cursor-pointer border-none"
+                                        placeholder="June 21, 2008" readonly>
+                                    <input type="date" id="date-input"
+                                        class="absolute inset-0 opacity-0 cursor-pointer ">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tgl flex flex-col gap-3">
+                            <div class="date">
+                                <p class="font-bold text-[20px]">Guest</p>
+                            </div>
+                            <div
+                                class=" flex w-[93%] justify-between items-center  px-3 rounded-full border-2 border-black">
+                                <ion-icon class="text-[20px]" name="people"></ion-icon>
+                                <input type="text" id="numberInput" class="border-none md:px-4 px-1 py-2 rounded-md"
+                                    value="1 People" readonly>
+                                <div class="btn flex flex-row gap-1">
+                                    <button class="px-2 border border-black text-black rounded-full"
+                                        onclick="decrementNumber()">-</button>
+                                    <button class="px-2 border border-black text-black rounded-full"
+                                        onclick="incrementNumber()">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-reserve md:w-full w-[93%]">
+                            <a href="#">
+                                <p
+                                    class="bg-black text-white flex justify-center text-[20px] px-8 py-2 rounded-full brightness-75 hover:brightness-100">
+                                    Reserve</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- bottom hero -->
+        <div id="bottom" class="text-big w-full flex justify-center items-center pt-8 md:pt-14">
+            <div class="text-big-area w-[90%]">
+                <p class=" flex flex-col font-medium md:text-[84px] text-[25px]"><span class="uppercase">Escape the
+                        ordinary and
+                        discover the wonder of Bromo.</span> <span class="md:text-[20px] text-[15px] font-light">Witness
+                        stunning
+                        sunrises and explore its unique charm.</span></p>
+            </div>
+        </div>
+        <!-- service -->
+        <div id="service" class="offer w-full flex justify-center items-center pt-5 md:pt-10 pb-10">
+            <div class="offer-area w-[90%] grid md:flex gap-5">
+                <div class="kiri flex flex-col md:w-[50%] gap-5">
+                    <a href="detail-cloud.html">
+                        <div
+                            class="above-the-cloud flex flex-col justify-between w-full md:h-[300pt] h-[200pt] opacity-80 hover:opacity-100 cursor-pointer bg-[url(bhumi/bhumi-bg-cloud.png)] rounded-[18px] p-5">
+                            <div class="most-popular  flex justify-end items-end">
+                                <p
+                                    class="text-white font-medium bg-black px-5 py-2 backdrop-blur-2xl  bg-opacity-40 rounded-[15px]">
+                                    Most Popular</p>
+                            </div>
+                            <div class="title flex flex-col">
+                                <p class="uppercase text-white font-light md:text-[20px]">The beauty of bromo</p>
+                                <p class="font-bold text-white text-[25px] md:text-[38px]">Country above the Clouds</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="detail-horse.html">
+                        <div
+                            class="horse flex flex-col justify-end  w-full md:h-[300pt] h-[200pt] opacity-80 hover:opacity-100 cursor-pointer bg-[url(bhumi/bhumi-bg-horse.png)] rounded-[18px] p-5">
+                            <p class="uppercase text-white font-light md:text-[20px]">unforgaettable experience</p>
+                            <p class="font-bold text-white text-[25px] md:text-[38px]">Bromo Horse Riding</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="kanan flex flex-col md:w-[50%] gap-5">
+                    <div class="atas flex gap-5">
+                        <a class="w-full" href="detail-hiking.html">
+                            <div
+                            class="hiking flex flex-col justify-end w-full md:h-[520pt] h-[200pt] opacity-80 hover:opacity-100 cursor-pointer  bg-[url(bhumi/bhumi-bg-hiking.png)] rounded-[20px] md:rounded-[18px] p-2 md:p-5">
+                            <p class="uppercase text-white font-light text-[10px] md:text-[20px]">Memorable
+                                experience
+                            </p>
+                            <p class="font-bold text-white text-[20px] md:text-[38px]">Hiking on Bromo</p>
+                        </div>
+                        </a>
+                        <div
+                            class="hiking flex flex-col justify-end w-full md:h-[520pt] h-[200pt] opacity-80 hover:opacity-100 cursor-pointer  bg-[url(bhumi/bhumi-bg-tour.png)] rounded-[20px] md:rounded-[18px] p-2 md:p-5">
+                            <p class="uppercase text-white font-light text-[10px] md:text-[20px]">Jeeps go around bromo
+                            </p>
+                            <p class="font-bold text-white text-[20px] md:text-[38px]">Lava Jeep Tour</p>
+                        </div>
+                    </div>
+                    <div class="bawah flex items-center justify-between bg-black p-5 rounded-[18px]">
+                        <div class="kiri">
+                            <p class="md:text-[42px] text-[30px] text-white"><span class="font-bold">10+</span> Services
+                            </p>
+                        </div>
+                        <div class="kanan brightness-75 hover:brightness-100 bg-white py-3 px-5 rounded-full">
+                            <a href="explore.html">
+                                <p class="font-thin md:text-[20px]">Explore More</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- near destination -->
+        <div class="near w-full flex justify-center items-center md:pt-14">
+            <div class="near-area w-[90%] flex flex-col">
+                <div class="title flex flex-col gap-3">
+                    <p class="uppercase flex gap-1"> <span class="flex items-center text-[20px]">
+                            <ion-icon name="radio-button-on-outline"></ion-icon>
+                        </span>Destination near from bromo</p>
+                    <p class="md:text-[36px] font-light">DISCOVER BROMO DESTINATIONS WITH BHUMI: EMBARK ON UNFORGETTABLE
+                        JOURNEYS, WHERE EACH DESTINATION UNFOLDS A UNIQUE TALE OF ADVENTURE AND WONDER IN THE STUNNING
+                        LANDSCAPES OF BROMO.</p>
+                </div>
+                <div class="content md:flex justify-between items-end pt-5 md:pt-12 pb-10 md:pb-14">
+                    <div class="hidden  md:block">
+                        <div class="list flex flex-col md:gap-2">
+                            <div class="list1 flex justify-start items-center  py-2 border-b-2 border-[#AAAAAA]  gap-6">
+                                <p class="text-[25px] md:text-[50px] font-medium">Jatim Park, Malang</p>
+                                <span class="uppercase px-7 py-2  rounded-full border-black border">
+                                    <p>Zoo</p>
+                                </span>
+                            </div>
+                            <div class="list1 flex justify-start items-center py-2 border-b-2 border-[#AAAAAA]  gap-6">
+                                <p class="text-[25px] md:text-[50px] font-medium">Batu Night Spectacular</p>
+                                <span class="uppercase px-7 py-2  rounded-full border-black border">
+                                    <p>Attraction</p>
+                                </span>
+                            </div>
+                            <div class="list1 flex justify-start items-center py-2 border-b-2 border-[#AAAAAA]  gap-6">
+                                <p class="text-[25px] md:text-[50px] font-medium">Museum Angkut</p>
+                                <span class="uppercase px-7 py-2  rounded-full border-black border">
+                                    <p>Museum</p>
+                                </span>
+                            </div>
+                            <div class="list1 flex justify-start items-center py-2 border-b-2 border-[#AAAAAA]  gap-6">
+                                <p class="text-[25px] md:text-[50px] font-medium">Coban Rondo</p>
+                                <span class="uppercase px-7 py-2  rounded-full border-black border">
+                                    <p>Waterfall</p>
+                                </span>
+                            </div>
+                            <div class="list1 flex justify-start items-center py-2 border-b-2 border-[#AAAAAA]  gap-6">
+                                <p class="text-[25px] md:text-[50px] font-medium">Omah Kayu</p>
+                                <span class="uppercase px-7 py-2  rounded-full border-black border">
+                                    <p>Lodging</p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image cursor-pointer opacity-85 md:pt-0 hover:opacity-100">
+                        <img src="bhumi/bhumi-museum.png" class="w-[700px] min-w-[10%]" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- promo -->
+        <div class="promo w-full flex justify-center items-center  md:pt-14">
+            <div class="promo-area w-[90%] flex flex-col">
+                <div class="promo-title flex flex-col md:gap-3">
+                    <p class="uppercase flex gap-1"> <span class="flex items-center text-[20px]">
+                            <ion-icon name="radio-button-on-outline"></ion-icon>
+                        </span>promotions that interest you</p>
+                    <p class="text-[36px] hidden md:block font-light">Exclusive deals for you!</p>
+                </div>
+                <div class="promo-content flex md:flex-row flex-col gap-5 pt-5 md:pt-8 pb-10">
+                    <div
+                        class="flex md:flex-row flex-col justify-between w-full md:h-[350pt]  md:opacity-80 hover:opacity-100 cursor-pointer bg-[url(bhumi/bhumi-promo1.png)] rounded-[18px] p-5">
+
+                        <div class="title-title flex flex-col justify-between">
+                            <div class="title flex flex-col gap-7">
+                                <span class="text-white text-[35px]">
+                                    <ion-icon name="pricetags"></ion-icon>
+                                </span>
+                                <div class="disc text-white flex flex-col">
+                                    <p class="text-[20px]">Exclusive CashBack <br> Deals For You!</p>
+                                    <p class="text-[100px] md:text-[150px] font-bold">30%</p>
+                                </div>
+                            </div>
+                            <p class="text-white md:block hidden">*with Terms & Conditions</p>
+                        </div>
+                        <div class="most-popular flex justify-start items-start">
+                            <p
+                                class="text-white font-normal bg-black px-5 py-2 backdrop-blur-2xl  bg-opacity-40 rounded-[15px]">
+                                Valid only on 17 Aug - 21 Sept 2024</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex md:flex-row flex-col justify-between w-full md:h-[350pt] md:opacity-80 hover:opacity-100 cursor-pointer bg-[url(bhumi/bhumi-promo2.png)] rounded-[18px] p-5">
+                        <div class="title-title flex flex-col justify-between">
+                            <div class="title flex flex-col gap-7">
+                                <span class="text-white text-[35px]">
+                                    <ion-icon name="pricetags"></ion-icon>
+                                </span>
+                                <div class="disc text-white flex flex-col">
+                                    <p class="text-[20px]">Exclusive Trip Package <br> Deals For You!</p>
+                                    <p class="text-[100px] md:text-[150px] font-bold">45%</p>
+                                </div>
+                            </div>
+                            <p class="text-white md:block hidden">*with Terms & Conditions</p>
+                        </div>
+                        <div class="most-popular flex justify-start items-start">
+                            <p
+                                class="text-white font-normal bg-black px-5 py-2 backdrop-blur-2xl  bg-opacity-40 rounded-[15px]">
+                                Valid only on 19 Sept - 21 Sept 2024</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Forecast -->
+
+        <div class="forecast w-full flex justify-center items-center md:pt-8">
+            <div
+                class="forecast-area w-[90%] flex md:flex-row flex-col md:justify-between justify-center items-center gap-5 md:gap-10 pb-10 md:pb-16">
+                <div class="kiri flex flex-col md:w-[40%] md:gap-5 gap-2">
+                    <p class="uppercase font-medium text-[24px] md:text-[42px] text-left">Real-time Weather Updates
+                        <span class="hidden md:block">to Match with Your Plans!</span></p>
+                    <p class="font-light md:text-[24px] text-[#888888]">Get timely and accurate weather updates that
+                        align with your plans, ensuring you're always ready to take on the day with confidence.</p>
+                </div>
+                <div
+                    class="weather-fore md:w-[55%] w-full flex md:flex-row flex-col  gap-5 md:gap-2 justify-center items-center">
+                    <div class="atas md:w-auto w-full md:flex grid grid-cols-2 gap-2">
+                        <div
+                            class="weather-1 cursor-pointer flex flex-col justify-between text-white bg-[url(bhumi/bhumi-weather-sunny.png)] md:w-[210pt] h-[210pt] rounded-[20px] p-3 md:p-5">
+                            <div class="atas flex flex-col">
+                                <p class="font-semibold text-[31px]">Bromo</p>
+                                <p class="font-normal text-[48px]">19°</p>
+                            </div>
+                            <div class="bawah flex flex-col text-white ">
+                                <ion-icon class="text-[25px] pb-2" name="sunny"></ion-icon>
+                                <p class="font-semibold text-[20px]">Sunny</p>
+                                <p class="font-medium text-[20px] text-white/60">Date : Today</p>
+                            </div>
+                        </div>
+                        <div
+                            class="weather-1 cursor-pointer opacity-70 hover:opacity-100 justify-between flex flex-col text-white bg-[url(bhumi/bhumi-weather-rainy.png)] md:w-[210pt] h-[210pt] rounded-[20px] p-3 md:p-5">
+                            <div class="atas flex flex-col">
+                                <p class="font-semibold text-[31px]">Bromo</p>
+                                <p class="font-normal text-[48px]">17°</p>
+                            </div>
+                            <div class="bawah flex flex-col text-white ">
+                                <ion-icon class="text-[25px] pb-2" name="rainy"></ion-icon>
+                                <p class="font-semibold text-[20px]">Rainy</p>
+                                <p class="font-medium text-[20px] text-white/60">Date : 22 Apr</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="weather-1  w-full cursor-pointer md:opacity-70 hover:opacity-100 justify-between flex md:flex-col flex-row md:items-start items-end text-white md:bg-[url(bhumi/bhumi-weather-cloud.png)] bg-[url(bhumi/bhumi-weather-mobile.png)] md:w-[310pt] md:h-[210pt] rounded-[20px] p-6 md:p-5">
+                        <div class="atas flex flex-col">
+                            <p class="font-semibold text-[31px]">Bromo</p>
+                            <p class="font-normal text-[48px]">20°</p>
+                        </div>
+                        <div class="bawah flex flex-col text-white ">
+                            <ion-icon class="text-[25px] pb-2" name="cloud"></ion-icon>
+                            <p class="font-semibold text-[20px]">Cloudly</p>
+                            <p class="font-medium text-[20px] text-white/80">Date : 23 Apr</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- 360 tour -->
+        <div class="tour w-full flex justify-center items-center ">
+            <div class="tour-area w-[90%] flex flex-col justify-start items-start gap-5 pb-12">
+                <div class="promo-title  flex-col gap-3 block md:hidden">
+                    <p class="uppercase flex gap-1"> <span class="flex items-center text-[20px]">
+                            <ion-icon name="radio-button-on-outline"></ion-icon>
+                        </span>360 Tour</p>
+                </div>
+                <a target="_blank" class="w-full min-w-[10%]" href="https://eastjava.travel/360asset/bromo/">
+                    <div
+                        class="tour-card flex justify-between bg-[url(bhumi/bhumi-360.png)] w-full md:p-10 p-8 md:h-[680pt] h-fit rounded-[20px]">
+                        <div class="kiri flex flex-col justify-between md:gap-0 gap-20">
+                            <p class="text-white md:text-[57px] md:block hidden font-medium">Still hesitant to <br>
+                                Travel in Bromo?</p>
+                            <div class="bawah text-white flex flex-col md:gap-10">
+                                <p class="text-[25px] font-semibold">Take a look Our</p>
+                                <p class="text-[100px] font-extrabold md:hidden block">360°</p>
+                                <svg class="md:block hidden" width="851" height="281" viewBox="0 0 851 281" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M789.043 123.932C777.624 123.932 767.176 121.138 757.7 115.549C748.468 109.961 741.057 102.551 735.469 93.318C729.881 83.8422 727.086 73.3946 727.086 61.9751C727.086 50.5556 729.881 40.2295 735.469 30.9967C741.057 21.521 748.468 13.989 757.7 8.4007C767.176 2.81244 777.624 0.0183105 789.043 0.0183105C800.463 0.0183105 810.789 2.81244 820.022 8.4007C829.497 13.989 837.029 21.521 842.618 30.9967C848.206 40.2295 851 50.5556 851 61.9751C851 73.3946 848.206 83.8422 842.618 93.318C837.029 102.551 829.497 109.961 820.022 115.549C810.789 121.138 800.463 123.932 789.043 123.932ZM789.043 87.4867C796.089 87.4867 802.042 85.057 806.901 80.1977C812.004 75.0954 814.555 69.0212 814.555 61.9751C814.555 54.929 812.004 48.9763 806.901 44.117C802.042 39.0146 796.089 36.4635 789.043 36.4635C781.997 36.4635 775.923 39.0146 770.821 44.117C765.961 48.9763 763.532 54.929 763.532 61.9751C763.532 69.0212 765.961 75.0954 770.821 80.1977C775.923 85.057 781.997 87.4867 789.043 87.4867Z"
+                                        fill="white" />
+                                    <path
+                                        d="M560.826 280.282C539.201 280.282 520.128 274.45 503.607 262.788C487.328 251.126 474.572 234.725 465.339 213.587C456.106 192.449 451.49 167.909 451.49 139.968C451.49 111.784 455.985 87.2438 464.975 66.3485C474.207 45.4533 486.963 29.1744 503.242 17.512C519.764 5.84953 538.837 0.0183105 560.461 0.0183105C582.571 0.0183105 601.766 5.84953 618.044 17.512C634.566 29.1744 647.322 45.5748 656.312 66.713C665.545 87.6082 670.161 112.026 670.161 139.968C670.161 167.909 665.545 192.449 656.312 213.587C647.322 234.482 634.566 250.883 618.044 262.788C601.766 274.45 582.693 280.282 560.826 280.282ZM561.19 229.258C572.366 229.258 581.842 225.735 589.617 218.689C597.392 211.643 603.345 201.439 607.475 188.075C611.606 174.712 613.671 158.676 613.671 139.968C613.671 121.259 611.606 105.345 607.475 92.2246C603.345 78.8614 597.271 68.6567 589.253 61.6107C581.478 54.5646 571.881 51.0416 560.461 51.0416C549.285 51.0416 539.809 54.5646 532.034 61.6107C524.259 68.6567 518.306 78.8614 514.176 92.2246C510.045 105.345 507.98 121.259 507.98 139.968C507.98 158.433 510.045 174.348 514.176 187.711C518.306 201.074 524.259 211.4 532.034 218.689C540.052 225.735 549.77 229.258 561.19 229.258Z"
+                                        fill="white" />
+                                    <path
+                                        d="M323.38 280.282C304.671 280.282 288.028 276.394 273.45 268.619C258.872 260.601 247.452 249.789 239.191 236.183C230.93 222.577 226.8 207.27 226.8 190.262C226.8 181.758 227.65 173.255 229.351 164.751C231.052 156.247 234.453 146.892 239.556 136.688C244.658 126.483 252.311 114.821 262.516 101.7L337.958 4.39185H405.381L313.904 121.381L304.792 108.625C308.194 106.924 311.474 105.588 314.633 104.616C317.791 103.644 320.828 102.915 323.744 102.429C326.903 101.943 330.183 101.7 333.584 101.7C350.349 101.7 365.17 105.466 378.047 112.998C391.168 120.53 401.372 130.857 408.661 143.977C416.193 156.854 419.959 171.432 419.959 187.711C419.959 205.448 415.829 221.362 407.568 235.454C399.307 249.303 387.887 260.237 373.309 268.255C358.974 276.273 342.331 280.282 323.38 280.282ZM323.38 229.259C330.912 229.259 337.593 227.558 343.424 224.156C349.499 220.755 354.358 216.017 358.002 209.943C361.647 203.626 363.469 196.458 363.469 188.44C363.469 180.179 361.647 173.133 358.002 167.302C354.358 161.228 349.499 156.49 343.424 153.088C337.593 149.687 330.912 147.986 323.38 147.986C316.09 147.986 309.409 149.687 303.335 153.088C297.26 156.49 292.401 161.228 288.757 167.302C285.112 173.133 283.29 180.179 283.29 188.44C283.29 196.458 285.112 203.626 288.757 209.943C292.401 216.017 297.26 220.755 303.335 224.156C309.409 227.558 316.09 229.259 323.38 229.259Z"
+                                        fill="white" />
+                                    <path
+                                        d="M96.5797 280.282C81.5157 280.282 67.1806 277.488 53.5744 271.899C39.9682 266.068 28.4272 257.929 18.9515 247.481C9.47575 237.034 3.15858 224.764 0 210.672L49.9299 193.907C54.0603 205.569 60.1345 214.438 68.1525 220.512C76.1704 226.343 85.6462 229.259 96.5797 229.259C105.57 229.259 113.223 227.558 119.54 224.156C126.1 220.755 131.203 216.017 134.847 209.943C138.492 203.626 140.314 196.336 140.314 188.076C140.314 179.815 138.492 172.769 134.847 166.937C131.446 160.863 126.465 156.247 119.905 153.088C113.587 149.687 105.812 147.986 96.5797 147.986C91.2344 147.986 85.8891 148.593 80.5438 149.808C75.1985 151.023 70.3392 152.724 65.9658 154.91L52.8455 127.577L122.456 51.7706H16.4003V4.39185H185.87V48.1261L114.438 129.399L116.26 106.438C132.539 106.438 146.631 109.84 158.537 116.643C170.685 123.203 180.039 132.436 186.599 144.341C193.402 156.247 196.804 170.096 196.804 185.889C196.804 203.868 192.431 220.026 183.684 234.361C174.937 248.696 163.031 259.994 147.967 268.255C132.903 276.273 115.774 280.282 96.5797 280.282Z"
+                                        fill="white" />
+                                </svg>
+                                <p class="text-[47px]  font-bold">Tour for You!</p>
+                            </div>
+                        </div>
+                        <ion-icon class="text-white text-[50px] md:block hidden" name="man"></ion-icon>
+                    </div>
+                </a>
+                <a href="https://eastjava.travel">
+                    <p class="text-gray-500 text-[10px]">src: https://eastjava.travel</p>
+                </a>
+            </div>
+        </div>
+        <!-- question -->
+        <div class="faq w-full flex justify-center items-center">
+            <div
+                class="faq-area w-[90%] md:h-[650pt] flex md:flex-row flex-col md:gap-8 gap-3 md:justify-between pb-10">
+
+                <div class="title md:w-[60%] flex flex-col justify-between">
+                    <div class="atas">
+                        <p class="uppercase text-[20px] md:text-[37px]">Bringing Nature's Beauty to Life.</p>
+                        <p class="uppercase text-[20px] md:text-[37px]">Ask us anything.</p>
+                    </div>
+                    <p class="text-[20px] md:block hidden">Bromo are where nature’s true beauty comes alive. Imagine
+                        waking up to the
+                        stunning views of
+                        Mount Bromo, with its majestic peaks and rolling landscapes, all while feeling completely in
+                        tune with the earth around you. 'Bhumi' is our way of connecting you to the essence of nature,
+                        offering an experience that’s as raw and breathtaking as the land itself. Here, every moment is
+                        a step closer to the heart of the earth, where adventure and serenity meet.</p>
+                </div>
+                <div class="md:w-[30%] md:h-[640pt]  overflow-auto flex flex-col gap-4 md:pb-5">
+                    <div
+                        class="faq-question hover:border hover:border-gray-400 duration-200 cursor-pointer w-full p-4 flex flex-col gap-5 rounded-[19px] bg-[#E6E6E6]">
+                        <div class="atas flex justify-between items-center">
+                            <div class="px-3 py-1 bg-white text-black rounded-full">
+                                <p>Question</p>
+                            </div>
+                            <ion-icon class="text-[25px] arrow transform transition-transform duration-300"
+                                name="chevron-down-outline"></ion-icon>
+                        </div>
+                        <p class="text-[30px] font-light">Any affordable hotels near Bromo?</p>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-out">
+                            <div class="p-3 rounded-[16px] bg-white">
+                                <p>Yes, there are several options ranging from guesthouses to mid-range hotels in the
+                                    nearby village of Cemoro Lawang. Some popular choices include Café Lava Hostel,
+                                    Yoschi’s Guesthouse, and Lava View Lodge. These places offer basic but comfortable
+                                    accommodations with stunning views of the Bromo landscape.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="faq-question hover:border hover:border-gray-400 duration-200 cursor-pointer w-full p-4 flex flex-col gap-5 rounded-[19px] bg-[#E6E6E6]">
+                        <div class="atas flex justify-between items-center">
+                            <div class="px-3 py-1 bg-white text-black rounded-full">
+                                <p>Question</p>
+                            </div>
+                            <ion-icon class="text-[25px] arrow transform transition-transform duration-300"
+                                name="chevron-down-outline"></ion-icon>
+                        </div>
+                        <p class="text-[30px] font-light">Do I need to book a jeep in advance?</p>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-out">
+                            <div class="p-3 rounded-[16px] bg-white">
+                                <p>While you can arrange a jeep on-site, it’s often recommended to book in advance,
+                                    especially during peak seasons. Booking ahead ensures you have a vehicle ready at
+                                    your preferred time and can avoid any potential delays or shortages.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="faq-question hover:border hover:border-gray-400 duration-200 cursor-pointer w-full p-4 flex flex-col gap-5 rounded-[19px] bg-[#E6E6E6]">
+                        <div class="atas flex justify-between items-center">
+                            <div class="px-3 py-1 bg-white text-black rounded-full">
+                                <p>Question</p>
+                            </div>
+                            <ion-icon class="text-[25px] arrow transform transition-transform duration-300"
+                                name="chevron-down-outline"></ion-icon>
+                        </div>
+                        <p class="text-[30px] font-light">Can I easily rent a motorbike to explore Bromo?</p>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-out">
+                            <div class="p-3 rounded-[16px] bg-white">
+                                <p>Yes, motorbikes can be rented in Cemoro Lawang and other nearby villages. It’s a
+                                    popular option for exploring the area independently. Make sure you’re comfortable
+                                    with the terrain, as the roads can be challenging.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden md:block">
+                        <div
+                            class="faq-question hover:border hover:border-gray-400 duration-200 cursor-pointer w-full p-4 flex flex-col gap-5 rounded-[19px] bg-[#E6E6E6]">
+                            <div class="atas flex justify-between items-center">
+                                <div class="px-3 py-1 bg-white text-black rounded-full">
+                                    <p>Question</p>
+                                </div>
+                                <ion-icon class="text-[25px] arrow transform transition-transform duration-300"
+                                    name="chevron-down-outline"></ion-icon>
+                            </div>
+                            <p class="text-[30px] font-light">Are there any ATMs close to the Bromo area?</p>
+                            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-out">
+                                <div class="p-3 rounded-[16px] bg-white">
+                                    <p>There are a few ATMs in Cemoro Lawang, but it’s recommended to bring enough cash
+                                        with you, as they can sometimes run out of money, especially during busy
+                                        periods. Credit card facilities are limited."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="footer w-full flex justify-center items-center md:pt-36 pb-10">
+            <div class="footer-area w-[90%] flex flex-col justify-between items-center">
+                <div class="atas flex w-full justify-between  items-start py-12 border-b border-[#C1C1C1]">
+                    <div class="kiri-items w-[5%] flex flex-col gap-5">
+                        <a href="#">
+                            <p class="uppercase hover:underline">Facebook</p>
+                        </a>
+                        <a href="#">
+                            <p class="uppercase hover:underline">Twitter</p>
+                        </a>
+                        <a href="#">
+                            <p class="uppercase hover:underline">Youtube</p>
+                        </a>
+                        <a href="#">
+                            <p class="uppercase hover:underline">Instagram</p>
+                        </a>
+                    </div>
+                    <div class="md:block hidden w-[70%]">
+                        <div class="tengah w-full flex flex-col items-center justify-center gap-10 ">
+                            <p class="text-[30px] font-semibold">Bhumi</p>
+                            <p class="text-[47px] text-center uppercase font-light">Discovering the Beauty of <br>
+                                Nature and Traditions, One <br> Adventure at a Time.</p>
+                        </div>
+                    </div>
+                    <div class="kiri-items md:w-[7%] flex flex-col gap-5">
+                        <a href="#">
+                            <p class="uppercase text-right hover:underline">About us</p>
+                        </a>
+                        <a href="#">
+                            <p class="uppercase text-right hover:underline">Contact us</p>
+                        </a>
+                        <a href="#">
+                            <p class="uppercase text-right hover:underline">Article</p>
+                        </a>
+                        <a href="#">
+                            <p class="uppercase text-right hover:underline">Support</p>
+                        </a>
+                        <a href="#">
+                            <p class="uppercase text-right hover:underline">Guides</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="bawah w-full flex md:justify-between justify-center py-5">
+                    <p class="font-medium ">©2024 ALL RIGHT RESERVE</p>
+                    <a href="#">
+                        <p class="font-medium md:block hidden">TERMS & CONDITIONS</p>
+                    </a>
+                    <a href="#">
+                        <p class="font-medium md:block hidden">PRIVACY AND POLICY</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script>
+        const navItems = document.querySelector('.slide');
+        const button = document.querySelector('[onclick="onToggle(this)"]');
+
+
+        function onToggle(e) {
+            navItems.classList.toggle('top-[0]'); // Toggling the 'top-[0]' class
+
+            // Check if 'top-[0]' class is active
+            const isOpen = navItems.classList.contains('top-[0]');
+
+            // Update button text based on the state
+            if (isOpen) {
+                button.innerText = 'Close';
+            } else {
+                button.innerText = 'Menu';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const dateInput = document.getElementById('date-input');
+            const displayInput = document.getElementById('display-input');
+
+            dateInput.addEventListener('input', function () {
+                const date = new Date(this.value);
+                if (!isNaN(date.getTime())) {
+                    const options = {
+
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    };
+                    const formattedDate = date.toLocaleDateString('en-US', options);
+                    displayInput.value = formattedDate;
+                } else {
+                    displayInput.value = '';
+                }
+            });
+
+            displayInput.addEventListener('click', function () {
+                dateInput.click();
+            });
+        });
+
+        let numberInput = document.getElementById('numberInput');
+        let number = 1;
+        let people = ' People';
+
+        function incrementNumber() {
+            number++;
+            numberInput.value = number + people;
+        }
+
+        function decrementNumber() {
+            if (number > 1) {
+                number--;
+                numberInput.value = number + people;
+            }
+        }
+
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.querySelector('.faq-answer');
+                const arrow = question.querySelector('.arrow');
+
+                // Toggle the max height for the answer
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null; // Collapse the answer
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + "px"; // Expand the answer
+                }
+
+                // Toggle the arrow icon rotation
+                arrow.classList.toggle('rotate-180');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

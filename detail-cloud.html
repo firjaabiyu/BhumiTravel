@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhumi Above Cloud</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+
+<body>
+    <div id="notification"
+        class="hidden fixed z-50 bottom-10 left-1/2 transform -translate-x-1/2 bg-black text-white px-4 py-2 rounded-lg shadow-lg">
+        Link copied!
+    </div>
+
+    <section class="md:block hidden">
+        
+        <!-- hero -->
+        <div class="hero w-full flex justify-center items-center pt-14">
+            <div class="hero-area w-[90%] flex flex-col gap-5">
+                <div class="back flex justify-start items-start">
+                    <a onclick="goBack()">
+                        <p class="flex cursor-pointer gap-2 text-[20px] hover:bg-[#eeeeee] duration-150 px-5 py-2 items-center">
+                            <ion-icon name="arrow-back-circle"></ion-icon> Back
+                        </p>
+                    </a>
+                </div>
+                <div class="title flex justify-between">
+                    <p class="font-medium text-[40px]">Country above the Clouds - Trip</p>
+                    <div class="kanan flex justify-center gap-5 items-center">
+                        <button id="share-button"
+                            class="flex justify-center text-black hover:bg-[#eeeeee] p-2 rounded-[10px] items-center transition duration-200">
+                            <ion-icon name="share-outline" class="text-[22px]"></ion-icon>
+                            <span class="underline ml-2">Share</span>
+                        </button>
+                        <button id="like-button"
+                            class="text-black hover:bg-[#eeeeee] p-2 rounded-[10px] flex gap-2 transition duration-200">
+                            <ion-icon id="like-icon" name="heart-circle-outline" class="text-2xl"></ion-icon>
+                            <span id="like-text" class="underline">Save</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="photo flex justify-center gap-3 ">
+                    <img src="bhumi/bhumi-detail-pic1.png" class="opacity-80 hover:opacity-100 min-w-[10%] rounded-r-[11.22px]"
+                        alt="">
+                    <div class="kanan flex flex-col gap-3">
+                        <img src="bhumi/bhumi-detail-pic3.png" class="opacity-80 hover:opacity-100 rounded-l-[11.22px]"
+                            alt="">
+                        <div class=" flex gap-3">
+                            <img src="bhumi/bhumi-detail-pic4.png"
+                                class="opacity-80 hover:opacity-100 w-1/2 h-full rounded-[11.22px]" alt="">
+                            <div
+                                class="more-pic bg-[url(bhumi/bhumi-detail-pic5.png)] p-4 w-1/2 h-full flex justify-end items-end opacity-80 hover:opacity-100 rounded-[11.22px]">
+                                <a href="#">
+                                    <p
+                                        class="px-4 py-1 bg-black text-white  font-medium brightness-50 hover:brightness-100">
+                                        More Photos</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- desk -->
+        <div class="desk w-full flex justify-center items-center pt-10 ">
+            <div class="area w-[90%] flex flex-col justify-center items-center gap-12">
+                <div class="price-title flex justify-between items-start w-full  ">
+                    <!-- konten untama -->
+                    <div class="desk-title flex flex-col w-[50%] ">
+                        <div class="title flex flex-col gap-4 py-8 border-b border-[#C3C3C3]">
+                            <div class="text flex flex-col">
+                                <p class="font-semibold text-[30px]">Bromo Malang, Indonesia</p>
+                                <p class="font-light text-[20px]">2 Days & 1 Night Experience</p>
+                            </div>
+                            <div class="rate flex gap-2 items-center">
+                                <div class="icon-text gap-1 flex">
+                                    <ion-icon class="text-[20px]" name="star"></ion-icon>
+                                    <p class="font-semibold">5.0</p>
+                                </div>
+                                <svg width="6" height="6" viewBox="0 0 6 6" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2.60014 5.77515C2.11529 5.77515 1.68239 5.66692 1.30144 5.45047C0.920488 5.22536 0.617458 4.92233 0.39235 4.54138C0.167242 4.16043 0.0546875 3.7232 0.0546875 3.22969C0.0546875 2.77082 0.162913 2.35956 0.379363 1.99593C0.604471 1.62363 0.907502 1.32926 1.28845 1.11281C1.66941 0.8877 2.10664 0.775146 2.60014 0.775146C3.06767 0.775146 3.48326 0.8877 3.84689 1.11281C4.21053 1.32926 4.50057 1.62363 4.71702 1.99593C4.93347 2.36822 5.04603 2.77948 5.05469 3.22969C5.05469 3.7232 4.94646 4.16043 4.73001 4.54138C4.51356 4.92233 4.21919 5.22536 3.84689 5.45047C3.4746 5.66692 3.05902 5.77515 2.60014 5.77515Z"
+                                        fill="black" />
+                                </svg>
+                                <p class="font-semibold underline cursor-pointer">9 Reviews</p>
+                            </div>
+                        </div>
+                        <div class="guide flex justify-between items-center gap-4 py-8 border-b border-[#C3C3C3]">
+                            <div class="img-guide flex justify-start items-center gap-4">
+                                <img src="bhumi/bhumi-guide1.png" class="w-[40px] cursor-pointer hover:brightness-75"
+                                    alt="">
+                                <div class="text flex flex-col">
+                                    <p class="text-[15px] font-medium">Trip Guide : Firja</p>
+                                    <p class="font-light text-[13px] text-[#a9a9a9]">7+ Years Experience</p>
+                                </div>
+                            </div>
+                            <p
+                                class="px-4 py-1 bg-black text-white hover:brightness-100 brightness-50 duration-100 cursor-pointer ">
+                                Look Up</p>
+                        </div>
+                        <div class="benefit flex flex-col gap-8 py-8 border-b border-[#C3C3C3]">
+                            <div class="benefit-items flex items-center gap-7">
+                                <ion-icon class="text-[30px]" name="restaurant"></ion-icon>
+                                <div class="text">
+                                    <p class="text-[20px]">Enjoy a Stack of Fresh Food & Drink</p>
+                                    <p class="text-[#9C9C9C]">We will provide you the best food for 2 day straight.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-items flex items-center gap-7">
+                                <ion-icon class="text-[30px]" name="image"></ion-icon>
+                                <div class="text">
+                                    <p class="text-[20px]">High Quality Photographer</p>
+                                    <p class="text-[#9C9C9C]">We provide you a high quality photographer for your
+                                        family.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-items flex items-center gap-7">
+                                <ion-icon class="text-[30px]" name="bed"></ion-icon>
+                                <div class="text">
+                                    <p class="text-[20px]">Comfortable Hotel Near from Bromo</p>
+                                    <p class="text-[#9C9C9C]">Enjoy your sleep at our hotel that near from Bromo Mount.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="benefit-items flex items-center gap-7">
+                                <ion-icon class="text-[30px]" name="car"></ion-icon>
+                                <div class="text">
+                                    <p class="text-[20px]">Well Transportation for You</p>
+                                    <p class="text-[#9C9C9C]">Vehicles to make your trip easier, so you don’t have to
+                                        walk too far</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="deskripsi flex flex-col gap-10 py-8 border-b border-[#C3C3C3]">
+                            <div class="note p-5 bg-[#efefef] rounded-[10px]">
+                                <p>Some info has been automatically translated. <span
+                                        class="font-semibold underline cursor-pointer">Show original</span></p>
+                            </div>
+                            <div class="text flex flex-col gap-7">
+                                <p class="text-[18px]">Dear Guests,</p>
+                                <p class="text-[18px]">Embark on an extraordinary journey to the heart of East Java,
+                                    Indonesia, and witness the breathtaking beauty of Mount Bromo. We invite you to join
+                                    our exclusive "Country Above the Clouds Tour," where you'll have the unique
+                                    opportunity to explore the mystical landscapes that define this enchanting region.
+                                    As you traverse the trails and ascend the volcanic peaks, you'll be surrounded by
+                                    the wonders of nature—from rolling sea sands to stunning sunrise vistas that cast a
+                                    magical glow over the landscape. <br> ...</p>
+                                <p class="underline cursor-pointer flex gap-2 items-center text-[20px]">See More
+                                    <ion-icon class="" name="arrow-forward"></ion-icon>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tidur flex flex-col gap-5 pt-11">
+                            <p class="text-[25px] font-medium">Where you’ll sleep</p>
+                            <div class="card-cont flex gap-4">
+                                <div class="card-1 flex flex-col gap-3 cursor-pointer">
+                                    <img src="bhumi/bhumi-detail-bedroom.png" class="rounded-[18px] w-[400px]" alt="">
+                                    <div class="text flex flex-col">
+                                        <p class="font-semibold text-[25px]">Bedroom</p>
+                                        <p class="font-normal">1 double bed</p>
+                                    </div>
+                                </div>
+                                <div class="card-2 flex flex-col gap-3 cursor-pointer">
+                                    <img src="bhumi/bhumi-detail-livingroom.png" class="rounded-[18px] w-[400px]"
+                                        alt="">
+                                    <div class="text flex flex-col">
+                                        <p class="font-semibold text-[25px]">Living Room</p>
+                                        <p class="font-normal">2 floor matrees</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="pt-11"><span class="font-semibold">Rules :</span> <br>- On Time <br>- Do not
+                                litter <br><br><span class="underline cursor-pointer">More...</span></p>
+                        </div>
+                    </div>
+                    <!-- sticky -->
+                    <div
+                        class="price flex flex-col items-center justify-center gap-10 sticky top-32 p-6 rounded-[15px] border border-black">
+                        <div class="atas flex flex-col gap-4 items-center">
+                            <p class="font-medium text-[25px]">Add dates for booking</p>
+                            <div class="flex flex-col">
+                                <div class="column flex">
+                                    <div
+                                        class="check-in cursor-pointer py-4 px-10 text-center  gap-1 border flex flex-col rounded-tl-[10px]">
+                                        <p class="uppercase font-medium text-[10px]">check-in</p>
+                                        <p class="text-[#c3c3c3] text-[15px]">Add date</p>
+                                    </div>
+                                    <div
+                                        class="check-in cursor-pointer py-4 px-10 text-center gap-1 border flex flex-col rounded-tr-[10px]">
+                                        <p class="uppercase font-medium text-[10px]">check-out</p>
+                                        <p class="text-[#c3c3c3] text-[15px]">Add date</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="check-in py-4 px-3  gap-1 border flex justify-between items-center rounded-b-[10px]">
+                                    <div class="text flex flex-col">
+                                        <p class="uppercase font-medium text-[10px]">Guest</p>
+                                        <input type="text" id="numberInput" class="border-none  rounded-md"
+                                            value="1 Guest" readonly>
+                                    </div>
+                                    <div class="btn flex flex-row gap-1">
+                                        <button class="px-2 border border-black text-black rounded-full"
+                                            onclick="decrementNumber()">-</button>
+                                        <button class="px-2 border border-black text-black rounded-full"
+                                            onclick="incrementNumber()">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="font-semibold text-[30px]">Rp1.500.000/<span class="font-light">guest</span></p>
+                        </div>
+                        <p
+                            class="text-white bg-black w-full flex items-center justify-center py-3 cursor-pointer hover:bg-black/80 text-[25px]">
+                            Book Here</p>
+                    </div>
+                </div>
+                <div class="maps w-full gap-7 flex flex-col py-10 border-t border-[#C3C3C3]">
+                    <div class="text-atas">
+                        <p class="font-medium text-[25px]">Where you’ll be</p>
+                        <p class="text-[#c3c3c3]">Bromo Mount, Malang, Indonesia</p>
+                    </div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15806.180047325448!2d112.94271245432226!3d-7.942493323305833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd637aaab794a41%3A0xada40d36ecd2a5dd!2sGn.%20Bromo!5e0!3m2!1sid!2sid!4v1725328824241!5m2!1sid!2sid"
+                        width="100%" height="450" style="border:0; border-radius: 10px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="md:hidden block">
+        <!-- navbar -->
+
+        <!-- hero -->
+        <div class="hero w-full flex flex-col justify-center items-center pt-12">
+            <div class="hero-area w-full flex flex-col justify-center items-center gap-5 pb-24">
+                <!-- share like back -->
+                <div class="title flex w-[90%] justify-between items-center">
+                    <a class="flex gap-2 items-center cursor-pointer" onclick="goBack()">
+                        <ion-icon class="text-[20px]" name="arrow-back-circle"></ion-icon>
+                        <p>Back</p>
+                    </a>
+                    <div class="kanan flex justify-center gap-5 items-center">
+                        <button id="share-button-m" class="flex justify-center text-black p-2 items-center">
+                            <ion-icon name="share-outline" class="text-[22px]"></ion-icon>
+                            <span class="underline ml-2">Share</span>
+                        </button>
+                        <button id="like-button-m" class="text-black p-2 flex gap-2">
+                            <ion-icon id="like-icon-m" name="heart-circle-outline" class="text-2xl"></ion-icon>
+                            <span id="like-text-m" class="underline">Save</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- photo -->
+                <div class="photo flex justify-center gap-3 w-full">
+                    <div
+                        class="more-pic bg-[url(bhumi/bhumi-detail-pic1-mobile.png)] p-4 w-full h-[300px] flex justify-end items-end ">
+                        <a href="#">
+                            <p class="px-4 py-1 bg-black text-white  font-medium ">
+                                1/50 Photos</p>
+                        </a>
+                    </div>
+                </div>
+                <!-- title -->
+                <div class="title w-[90%] flex flex-col gap-4 pb-4 border-b border-[#C3C3C3]">
+                    <div class="text flex flex-col">
+                        <p class="font-medium text-[25px] ">Country above the Clouds</p>
+                        <p class="text-[20px]">Bromo Malang, Indonesia</p>
+                        <p class="font-light ">2 Days & 1 Night Experience</p>
+                    </div>
+                    <div class="rate flex gap-2 items-center">
+                        <div class="icon-text gap-1 flex">
+                            <ion-icon class="text-[20px]" name="star"></ion-icon>
+                            <p class="font-semibold">5.0</p>
+                        </div>
+                        <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.60014 5.77515C2.11529 5.77515 1.68239 5.66692 1.30144 5.45047C0.920488 5.22536 0.617458 4.92233 0.39235 4.54138C0.167242 4.16043 0.0546875 3.7232 0.0546875 3.22969C0.0546875 2.77082 0.162913 2.35956 0.379363 1.99593C0.604471 1.62363 0.907502 1.32926 1.28845 1.11281C1.66941 0.8877 2.10664 0.775146 2.60014 0.775146C3.06767 0.775146 3.48326 0.8877 3.84689 1.11281C4.21053 1.32926 4.50057 1.62363 4.71702 1.99593C4.93347 2.36822 5.04603 2.77948 5.05469 3.22969C5.05469 3.7232 4.94646 4.16043 4.73001 4.54138C4.51356 4.92233 4.21919 5.22536 3.84689 5.45047C3.4746 5.66692 3.05902 5.77515 2.60014 5.77515Z"
+                                fill="black" />
+                        </svg>
+                        <p class="font-semibold underline cursor-pointer">9 Reviews</p>
+                    </div>
+                </div>
+                <!-- profile -->
+                <div class="guide flex justify-between items-center gap-4 pb-4 w-[90%] border-b border-[#C3C3C3]">
+                    <div class="img-guide flex justify-start items-center gap-4">
+                        <img src="bhumi/bhumi-guide1.png" class="w-[40px] cursor-pointer" alt="">
+                        <div class="text flex flex-col">
+                            <p class="text-[15px] font-medium">Tour Guide : Firja</p>
+                            <p class="font-light text-[13px] text-[#a9a9a9]">7+ Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- benefit -->
+                <div class="benefit flex flex-col gap-8 pb-4 w-[90%] border-b border-[#C3C3C3]">
+                    <div class="benefit-items flex items-center gap-7">
+                        <ion-icon class="text-[30px]" name="restaurant"></ion-icon>
+                        <div class="text">
+                            <p class="text-[17px]">Fresh Food & Drink</p>
+                            <p class="text-[#9C9C9C] text-[14px]">Food for 2 day straight.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-items flex items-center gap-7">
+                        <ion-icon class="text-[30px]" name="image"></ion-icon>
+                        <div class="text">
+                            <p class="text-[17px]">High Quality Photographer</p>
+                            <p class="text-[#9C9C9C] text-[14px]">Photographer for your
+                                family.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-items flex items-center gap-7">
+                        <ion-icon class="text-[30px]" name="bed"></ion-icon>
+                        <div class="text">
+                            <p class="text-[17px]">Comfortable Hotel Near from Bromo</p>
+                            <p class="text-[#9C9C9C] text-[14px]">Sleep at hotel near from Bromo Mount.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="benefit-items flex items-center gap-7">
+                        <ion-icon class="text-[30px]" name="car"></ion-icon>
+                        <div class="text">
+                            <p class="text-[17px]">Well Transportation for You</p>
+                            <p class="text-[#9C9C9C] text-[14px]">Vehicles to make your trip easier.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- deskripsi -->
+                <div class="deskripsi flex flex-col gap-10 pb-4 w-[90%] border-b border-[#C3C3C3]">
+                    <div class="note p-5 bg-[#efefef] rounded-[10px]">
+                        <p>Some info has been automatically translated. <span
+                                class="font-semibold underline cursor-pointer">Show original</span></p>
+                    </div>
+                    <div class="text flex flex-col gap-7">
+                        <p class="">Dear Guests,</p>
+                        <p class="">Embark on an extraordinary journey to the heart of East Java,
+                            Indonesia, and witness the breathtaking beauty of Mount Bromo. We invite you to join
+                            our exclusive "Country Above the Clouds Tour," where you'll have the unique
+                            opportunity to explore the mystical landscapes that define this enchanting region.
+                            As you traverse the trails and ascend the volcanic peaks, you'll be surrounded by
+                            the wonders of nature—from rolling sea sands to stunning sunrise vistas that cast a
+                            magical glow over the landscape. <br> ...</p>
+                        <p class="underline cursor-pointer flex gap-2 items-center">See More
+                            <ion-icon class="" name="arrow-forward"></ion-icon>
+                        </p>
+                    </div>
+                </div>
+                <!-- sleep -->
+                <div class="tidur flex flex-col gap-5 pb-4 w-[90%] border-b border-[#C3C3C3]">
+                    <p class="text-[25px] font-medium">Where you’ll sleep</p>
+                    <div class="card-cont flex gap-4">
+                        <div class="card-1 flex flex-col gap-3 cursor-pointer">
+                            <img src="bhumi/bhumi-detail-bedroom.png" class="rounded-[18px] w-[400px]" alt="">
+                            <div class="text flex flex-col">
+                                <p class="font-semibold text-[25px]">Bedroom</p>
+                                <p class="font-normal">1 double bed</p>
+                            </div>
+                        </div>
+                        <div class="card-2 flex flex-col gap-3 cursor-pointer">
+                            <img src="bhumi/bhumi-detail-livingroom.png" class="rounded-[18px] w-[400px]" alt="">
+                            <div class="text flex flex-col">
+                                <p class="font-semibold text-[25px]">Living Room</p>
+                                <p class="font-normal">2 floor matrees</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="pt-5"><span class="font-semibold">Rules :</span> <br>- On Time <br>- Do not
+                        litter <br><br><span class="underline cursor-pointer">More...</span></p>
+                </div>
+                <!-- maps -->
+                <div class="maps w-[90%] gap-7 flex flex-col pb-4">
+                    <div class="text-atas">
+                        <p class="font-medium text-[25px]">Where you’ll be</p>
+                        <p class="text-[#c3c3c3]">Bromo Mount, Malang, Indonesia</p>
+                    </div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15806.180047325448!2d112.94271245432226!3d-7.942493323305833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd637aaab794a41%3A0xada40d36ecd2a5dd!2sGn.%20Bromo!5e0!3m2!1sid!2sid!4v1725328824241!5m2!1sid!2sid"
+                        width="100%" height="450" style="border:0; border-radius: 10px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+            </div>
+            <div
+                class="book-mobile w-full flex justify-between items-center px-5 py-5 border-t border-black fixed z-40 bottom-0 bg-white">
+                <div class="text flex flex-col">
+                    <p class="font-semibold">Rp1.500.000/<span class="font-light">guest</span></p>
+                    <div class="rate flex gap-2 items-center">
+                        <div class="icon-text gap-1 flex items-center">
+                            <ion-icon class="" name="star"></ion-icon>
+                            <p class="font-medium text-[14px]">5.0</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">
+                    <p class="px-5 py-1 text-white bg-black ">Booking</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        // JavaScript untuk toggle icon fill dekstop
+        document.getElementById('like-button').addEventListener('click', function () {
+            const icon = document.getElementById('like-icon');
+            const text = document.getElementById('like-text');
+            if (icon.getAttribute('name') === 'heart-circle-outline') {
+                icon.setAttribute('name', 'heart-circle');
+                this.classList.remove('text-black');
+                this.classList.add('text-pink-700');
+                text.textContent = 'Saved!';
+            } else {
+                icon.setAttribute('name', 'heart-circle-outline');
+                this.classList.remove('text-pink-700');
+                this.classList.add('text-black');
+                text.textContent = 'Save';
+            }
+        });
+
+        // JavaScript untuk toggle icon fill mobile
+        document.getElementById('like-button-m').addEventListener('click', function () {
+            const icon = document.getElementById('like-icon-m');
+            const text = document.getElementById('like-text-m');
+            if (icon.getAttribute('name') === 'heart-circle-outline') {
+                icon.setAttribute('name', 'heart-circle');
+                this.classList.remove('text-black');
+                this.classList.add('text-pink-700');
+                text.textContent = 'Saved!';
+            } else {
+                icon.setAttribute('name', 'heart-circle-outline');
+                this.classList.remove('text-pink-700');
+                this.classList.add('text-black');
+                text.textContent = 'Save';
+            }
+        });
+
+        // menyalin link (simulasi) untuk dekstop
+        document.getElementById('share-button').addEventListener('click', function () {
+            // Logika untuk menyalin link (simulasi)
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                // Menampilkan notifikasi
+                const notification = document.getElementById('notification');
+                notification.classList.remove('hidden');
+                setTimeout(() => {
+                    notification.classList.add('hidden');
+                }, 2000); // Notifikasi akan hilang setelah 2 detik
+            }).catch(err => {
+                console.error('Gagal menyalin teks: ', err);
+            });
+        });
+
+        // menyalin link (simulasi) untuk mobile
+        document.getElementById('share-button-m').addEventListener('click', function () {
+            // Logika untuk menyalin link (simulasi)
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                // Menampilkan notifikasi
+                const notification = document.getElementById('notification');
+                notification.classList.remove('hidden');
+                setTimeout(() => {
+                    notification.classList.add('hidden');
+                }, 2000); // Notifikasi akan hilang setelah 2 detik
+            }).catch(err => {
+                console.error('Gagal menyalin teks: ', err);
+            });
+        });
+
+
+        let numberInput = document.getElementById('numberInput');
+        let number = 1;
+        let people = ' Guest';
+
+        function incrementNumber() {
+            number++;
+            numberInput.value = number + people;
+        }
+
+        function decrementNumber() {
+            if (number > 1) {
+                number--;
+                numberInput.value = number + people;
+            }
+        }
+
+        function goBack() {
+            // Jika ada riwayat sebelumnya (referrer), lakukan history.back()
+            if (document.referrer) {
+                history.back();
+            } else {
+                // Jika tidak ada, arahkan ke index.html
+                window.location.href = 'index.html';
+            }
+        }
+    </script>
+</body>
+
+</html>

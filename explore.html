@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="bhumi/bhumi-shortcut-logo.png" \type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Bhumi Explore Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <style>
+        html {
+            overflow-x: hidden;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body class="font-[Plus Jakarta Sans] overflow-hidden">
+
+    <div
+        class="slide z-40 md:h-[70%] h-[45%] w-full md:p-16 p-5 py-32 flex flex-col  top-[-100%] md:justify-center border-b-2 border-black fixed bg-white duration-500 ease">
+
+        <ul class="duration-200 flex md:flex-row flex-col gap-7 justify-start md:items-center ease-oute w-[90%]">
+            <div class="kiri">
+                <li class="text-black md:text-[100px] text-[30px] etc "><a href="index.html"><span
+                            class="hover:underline">Home</span></a></li>
+                <li class="text-black md:text-[100px] text-[30px] etc md:pl-10 "><a href="explore.html"><span
+                            class="hover:underline">Places</span><span class="text-[15px] md:text-[20px]">(We offer You
+                            the Best
+                            Places)</span></a></li>
+                <li class="text-black md:text-[100px] text-[30px] etc md:pl-5 "><a href=""><span
+                            class="hover:underline">Blog</span><span class="text-[15px] md:text-[20px]">(Read all Blog
+                            that we Made for
+                            You)</span></a>
+                </li>
+            </div>
+
+        </ul>
+    </div>
+
+    <section>
+        <!-- navbar -->
+        <div class="nav z-50 fixed bg-white w-full flex flex-col justify-center items-center pt-10">
+            <div class="nav-area w-[90%] pb-5 flex justify-between items-center border-b-2 border-black">
+                <div class="title md:block hidden">
+                    <p class="text-[25px] font-light">Bromo Trip</p>
+                </div>
+                <div class="logo">
+                    <a href="index.html">
+                        <img class="w-[150px]" src="bhumi/bhumi-logo.png" alt="">
+                    </a>
+                </div>
+                <div class="logo">
+                    <a class="text-[25px] underline flex items-center font-light bg-black text-white cursor-pointer"
+                        onclick="onToggle(this)">
+                        Menu
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="title w-full flex justify-center items-center pt-24">
+            <div class="title-area w-[90%] flex flex-col">
+                <div class="title-big flex flex-col pt-6 gap-1">
+                    <p class=" text-[40px] md:px-0 px-2 md:text-[70px]">Choose your Tour</p>
+                    <div class="option flex gap-2 jus items-center">
+                        <span id="button1" onclick="displayContent('item1', 'button1')">
+                            <p
+                                class="md:px-4 px-2 py-2 text-[#C3C3C3] font-medium cursor-pointer hover:bg-[#f0f0f0] hover:text-black">
+                                Popular
+                            </p>
+                        </span>
+                        <span id="button2" onclick="displayContent('item2', 'button2')">
+                            <p
+                                class="md:px-4 px-2 py-2 text-[#C3C3C3] font-medium cursor-pointer hover:bg-[#f0f0f0] hover:text-black">
+                                Recommended</p>
+                        </span>
+                        <span id="button3" onclick="displayContent('item3', 'button3')">
+                            <p
+                                class="md:px-4 px-2 py-2 text-[#C3C3C3] font-medium cursor-pointer hover:bg-[#f0f0f0] hover:text-black">
+                                Most Visited</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- content -->
+        <div class="content-banner w-full flex justify-center items-center pt-10">
+            <div class="content-banner-area w-[90%]">
+                <!-- content most popular -->
+                <div id="item1" class="item flex justify-between gap-7 w-full overflow-auto">
+                    <a class="w-full" href="detail-cloud.html">
+                        <div
+                            class="content1 p-5 bg-[url(bhumi/bhumi-explore-banner1.png)] w-full h-[400pt] rounded-[20px] flex justify-center items-end">
+                            <div
+                                class="desk flex justify-between items-end w-full p-7 bg-black rounded-[16px] backdrop-blur-2xl bg-opacity-20">
+                                <div class="teks-title flex flex-col justify-between items-start gap-10">
+                                    <div class="title-atas">
+                                        <p class="font-semibold text-white text-[40px]">Country Clouds</p>
+                                        <p class="font-light text-white">Duration : 2 days & 1 night</p>
+                                    </div>
+                                    <p class="text-white text-[25px]"><span
+                                            class="font-semibold">Rp1.500.000</span>/guest
+                                    </p>
+                                </div>
+                                <div class="hidden md:block">
+                                    <div class="tag flex flex-col justify-end items-end gap-2 ">
+                                        <div class="flex justify-end items-end gap-2">
+                                            <p class="bg-white px-4 py-1 font-semibold rounded-[7px]">Most Popular</p>
+                                            <p class="bg-white px-4 py-1 font-semibold rounded-[7px]">Trip</p>
+                                        </div>
+                                        <p class="bg-white px-4 py-1 font-semibold rounded-[7px]">Most Visited</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="w-full " href="detail-horse.html">
+                        <div
+                            class="content1 p-5 bg-[url(bhumi/bhumi-explore-banner2.png)] w-full h-[400pt] rounded-[20px] flex justify-center items-end">
+                            <div
+                                class="desk flex justify-between items-end w-full p-7 bg-black rounded-[16px] backdrop-blur-2xl bg-opacity-20">
+                                <div class="teks-title flex flex-col justify-between items-start gap-10">
+                                    <div class="title-atas">
+                                        <p class="font-semibold text-white text-[40px]">Riding Horse</p>
+                                        <p class="font-light text-white">Duration : 2 hour</p>
+                                    </div>
+                                    <p class="text-white text-[25px]"><span
+                                            class="font-semibold">Rp.500.000</span>/guest
+                                    </p>
+                                </div>
+                                <div class="hidden md:block">
+                                    <div class="tag flex flex-col justify-end items-end gap-2">
+                                        <p class="bg-white px-4 py-1 font-semibold rounded-[7px]">Most Popular</p>
+                                        <div class="flex justify-end items-end gap-2">
+                                            <p class="bg-white px-4 py-1 font-semibold rounded-[7px]">Tour</p>
+                                            <p class="bg-white px-4 py-1 font-semibold rounded-[7px]">Affordable</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- content recommended -->
+                <div id="item2" class="item flex justify-between gap-7 w-full overflow-auto">
+                    <a class="w-full" href="detail-hiking.html">
+                        <div
+                            class="content1 p-5 bg-[url(bhumi/bhumi-explore-banner3.png)] w-full h-[400pt] rounded-[20px] flex justify-center items-end">
+                            <div
+                                class="desk flex justify-between items-end w-full p-7 bg-black rounded-[16px] backdrop-blur-2xl bg-opacity-20">
+                                <div class="teks-title flex flex-col justify-between items-start gap-10">
+                                    <div class="title-atas">
+                                        <p class="font-semibold text-white text-[40px]">Hiking Bromo</p>
+                                        <p class="font-light text-white">Duration : 3 days & 2 night</p>
+                                    </div>
+                                    <p class="text-white text-[25px]"><span
+                                            class="font-semibold">Rp2.000.000</span>/guest
+                                    </p>
+                                </div>
+                                <div class="hidden md:block">
+                                    <div class="tag flex flex-col justify-end items-end gap-2">
+                                        <p class="bg-white px-4 py-1 font-semibold rounded-[7px]">Recommended</p>
+                                        <div class="flex justify-end items-end gap-2">
+                                            <p class="bg-white px-4 py-1 font-semibold rounded-[7px]">Trip</p>
+                                            <p class="bg-white px-4 py-1 font-semibold rounded-[7px]">Most Visited</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="w-full " href="#">
+                        <div
+                            class="content1 p-5 bg-[url(bhumi/bhumi-explore-banner4.png)] w-full h-[400pt] rounded-[20px] flex justify-center items-end">
+                            <div
+                                class="desk flex justify-between items-end w-full p-7 bg-black rounded-[16px] backdrop-blur-2xl bg-opacity-20">
+                                <div class="teks-title flex flex-col justify-between items-start gap-10">
+                                    <div class="title-atas">
+                                        <p class="font-semibold text-white text-[40px]">Jeep Tour</p>
+                                        <p class="font-light text-white">Duration : 1 days</p>
+                                    </div>
+                                    <p class="text-white text-[25px]"><span
+                                            class="font-semibold">Rp.1.000.000</span>/car
+                                    </p>
+                                </div>
+                                <div class="hidden md:block">
+                                    <div class="tag flex flex-col justify-end items-end gap-2">
+                                        <p class="bg-white px-4 py-1 font-semibold rounded-[7px]">Recommended</p>
+                                        <div class="flex justify-end items-end gap-2">
+                                            <p class="bg-white px-4 py-1 font-semibold rounded-[7px]">Tour</p>
+                                            <p class="bg-white px-4 py-1 font-semibold rounded-[7px]">Affordable</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- content most visited -->
+                <div id="item3" class="item flex justify-between gap-7 w-full overflow-auto">
+                    <a class="w-full" href="detail-cloud.html">
+                        <div
+                            class="content1 p-5 bg-[url(bhumi/bhumi-explore-banner1.png)] w-full h-[400pt] rounded-[20px] flex justify-center items-end">
+                            <div
+                                class="desk flex justify-between items-end w-full p-7 bg-black rounded-[16px] backdrop-blur-2xl bg-opacity-20">
+                                <div class="teks-title flex flex-col justify-between items-start gap-10">
+                                    <div class="title-atas">
+                                        <p class="font-semibold text-white text-[40px]">Country Clouds</p>
+                                        <p class="font-light text-white">Duration : 2 days & 1 night</p>
+                                    </div>
+                                    <p class="text-white text-[25px]"><span
+                                            class="font-semibold">Rp1.500.000</span>/guest
+                                    </p>
+                                </div>
+                                <div class="hidden md:block">
+                                    <div class="tag flex flex-col justify-end items-end gap-2">
+                                        <div class="flex justify-end items-end gap-2">
+                                            <p class="bg-white px-4 py-1 font-semibold rounded-[7px]">Most Popular</p>
+                                            <p class="bg-white px-4 py-1 font-semibold rounded-[7px]">Trip</p>
+                                        </div>
+                                        <p class="bg-white px-4 py-1 font-semibold rounded-[7px]">Most Visited</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="w-full " href="#">
+                        <div
+                            class="content1 p-5 bg-[url(bhumi/bhumi-explore-banner3.png)] w-full h-[400pt] rounded-[20px] flex justify-center items-end">
+                            <div
+                                class="desk flex justify-between items-end w-full p-7 bg-black rounded-[16px] backdrop-blur-2xl bg-opacity-20">
+                                <div class="teks-title flex flex-col justify-between items-start gap-10">
+                                    <div class="title-atas">
+                                        <p class="font-semibold text-white text-[40px]">Hiking Bromo</p>
+                                        <p class="font-light text-white">Duration : 3 days & 2 night</p>
+                                    </div>
+                                    <p class="text-white text-[25px]"><span
+                                            class="font-semibold">Rp2.000.000</span>/guest
+                                    </p>
+                                </div>
+                                <div class="hidden md:block">
+                                    <div class="tag flex flex-col justify-end items-end gap-2">
+                                        <p class="bg-white px-4 py-1 font-semibold rounded-[7px]">Recommended</p>
+                                        <div class="flex justify-end items-end gap-2">
+                                            <p class="bg-white px-4 py-1 font-semibold rounded-[7px]">Trip</p>
+                                            <p class="bg-white px-4 py-1 font-semibold rounded-[7px]">Most Visited</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- promo -->
+        <div class="promo w-full flex justify-center items-center pt-12 pb-10">
+            <div class="promo-area w-[90%] flex flex-col gap-6">
+                <div class="title flex justify-between items-center">
+                    <p class="text-[25px]">Special Promo</p>
+                    <a href="#">
+                        <p class="text-[#c3c3c3] flex gap-1 items-center hover:text-black">More Promo<ion-icon
+                                name="chevron-forward"></ion-icon>
+                        </p>
+                    </a>
+                </div>
+                <div class="content-cupon flex justify-between gap-4 overflow-x-auto">
+                    <div
+                        class="content-promo flex brightness-90 md:flex-row flex-col hover:brightness-100 justify-between items-center px-4 py-5 bg-[url(bhumi/bhumi-explore-promo-mobile.png)] md:bg-[url(bhumi/bhumi-explore-promo.png)] w-full md:h-[100pt] rounded-[10px] cursor-pointer">
+                        <div class="kanan text-white flex flex-col justify-between ">
+                            <p class="font-semibold text-[25px]">Horse Riding</p>
+                            <p class="font-light text-[13px] md:block hidden">*with Terms & Conditions</p>
+                        </div>
+                        <p class="text-white font-semibold text-[60px]">25%</p>
+                    </div>
+                    <div
+                        class="content-promo flex brightness-90 md:flex-row flex-col hover:brightness-100 justify-between items-center px-4 py-5 bg-[url(bhumi/bhumi-explore-promo1-mobile.png)] md:bg-[url(bhumi/bhumi-explore-promo1.png)] w-full md:h-[100pt] rounded-[10px] cursor-pointer">
+                        <div class="kanan text-white flex flex-col justify-between ">
+                            <p class="font-semibold text-[25px]">Malang Trip</p>
+                            <p class="font-light text-[13px] md:block hidden">*with Terms & Conditions</p>
+                        </div>
+                        <p class="text-white font-semibold text-[60px]">33%</p>
+                    </div>
+                    <div
+                        class="content-promo flex brightness-90 md:flex-row flex-col hover:brightness-100 justify-between items-center px-4 py-5 bg-[url(bhumi/bhumi-explore-promo2-mobile.png)] md:bg-[url(bhumi/bhumi-explore-promo2.png)] w-full md:h-[100pt] rounded-[10px] cursor-pointer">
+                        <div class="kanan text-white flex flex-col justify-between ">
+                            <p class="font-semibold text-[25px]">Kawah Ijen</p>
+                            <p class="font-light text-[13px] md:block hidden">*with Terms & Conditions</p>
+                        </div>
+                        <p class="text-white font-semibold text-[60px]">10%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- trip -->
+        <div class="trip w-full flex justify-center items-center pt-8 pb-10">
+            <div class="trip-area w-[90%] grid md:grid-cols-2 justify-start items-start gap-7">
+                <a href="#">
+                    <div
+                        class="card p-5 border hover:border-black h-full duration-300 rounded-[20px] flex md:gap-12 gap-8 items-center">
+                        <img src="bhumi/bhumi-explore-trip.png" class="rounded-[15px] md:w-[200px] w-[100px]" alt="">
+                        <div class="text-title flex flex-col justify-between items-start h-full">
+                            <div class="atas">
+                                <p class="font-medium text-[20px] md:text-[44px]">Bromo - Malang</p>
+                                <p class="font-light md:text-[20px]">Duration : 4 days & 3 nights</p>
+                            </div>
+                            <p class="md:text-[30px]"><span class="font-semibold">Rp.2.500.000</span>/2 guest</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div
+                        class="card p-5 border hover:border-black h-full duration-300 rounded-[20px] flex md:gap-12 gap-8 items-center">
+                        <img src="bhumi/bhumi-explore-trip1.png" class="rounded-[15px] md:w-[200px] w-[100px]" alt="">
+                        <div class="text-title flex flex-col justify-between items-start h-full">
+                            <div class="atas">
+                                <p class="font-medium text-[20px] md:text-[44px]">Bromo - K.Ijen</p>
+                                <p class="font-light md:text-[20px]">Duration : 3 days & 2 nights</p>
+                            </div>
+                            <p class="md:text-[30px]"><span class="font-semibold">Rp.2.000.000</span>/guest</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div
+                        class="card p-5 border hover:border-black h-full duration-300 rounded-[20px] flex md:gap-12 gap-8 items-center">
+                        <img src="bhumi/bhumi-explore-trip2.png" class="rounded-[15px] md:w-[200px] w-[100px]" alt="">
+                        <div class="text-title flex flex-col justify-between items-start h-full">
+                            <div class="atas">
+                                <p class="font-medium text-[20px] md:text-[44px]">Madakipura</p>
+                                <p class="font-light md:text-[20px]">Duration : 2 days & 1 nights</p>
+                            </div>
+                            <p class="md:text-[30px]"><span class="font-semibold">Rp.1.800.000</span>/guest</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div
+                        class="card p-5 border hover:border-black h-full duration-300 rounded-[20px] flex md:gap-12 gap-8 items-center">
+                        <img src="bhumi/bhumi-explore-trip3.png" class="rounded-[15px] md:w-[200px] w-[100px]" alt="">
+                        <div class="text-title flex flex-col justify-between items-start h-full">
+                            <div class="atas">
+                                <p class="font-medium text-[20px] md:text-[44px]">Bromo Sunrise</p>
+                                <p class="font-light md:text-[20px]">Duration : 1 days</p>
+                            </div>
+                            <p class="md:text-[30px]"><span class="font-semibold">Rp.400.000</span>/guest</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div
+                        class="card p-5 border hover:border-black h-full duration-300 rounded-[20px] flex md:gap-12 gap-8 items-center">
+                        <img src="bhumi/bhumi-explore-trip4.png" class="rounded-[15px] md:w-[200px] w-[100px]" alt="">
+                        <div class="text-title flex flex-col justify-between items-start h-full">
+                            <div class="atas">
+                                <p class="font-medium text-[20px] md:text-[44px]">Private Trip</p>
+                                <p class="font-light md:text-[20px]">Duration : 3 days & 2 nights</p>
+                            </div>
+                            <p class="md:text-[30px]"><span class="font-semibold">Rp.2.200.000</span>/2 guest</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div
+                        class="card p-5 border hover:border-black h-full duration-300 rounded-[20px] flex md:gap-12 gap-8 items-center">
+                        <img src="bhumi/bhumi-explore-trip5.png" class="rounded-[15px] md:w-[200px] w-[100px]" alt="">
+                        <div class="text-title flex flex-col justify-between items-start h-full">
+                            <div class="atas">
+                                <p class="font-medium text-[20px] md:text-[44px]">Bromo Milk Way</p>
+                                <p class="font-light md:text-[20px]">Duration : 1 night</p>
+                            </div>
+                            <p class="md:text-[30px]"><span class="font-semibold">Rp.1.000.000</span>/guest</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="text w-full flex justify-center items-center pt-8 pb-20">
+            <div class="text-area w-[90%] flex flex-col gap-20 justify-center items-center">
+                <a href="index.html">
+                    <img src="bhumi/bhumi-logo.png" width="200" alt="">
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <script>
+        const navItems = document.querySelector('.slide');
+        const button = document.querySelector('[onclick="onToggle(this)"]');
+
+
+        function onToggle(e) {
+            navItems.classList.toggle('top-[0]'); // Toggling the 'top-[0]' class
+
+            // Check if 'top-[0]' class is active
+            const isOpen = navItems.classList.contains('top-[0]');
+
+            // Update button text based on the state
+            if (isOpen) {
+                button.innerText = 'Close';
+            } else {
+                button.innerText = 'Menu';
+            }
+        }
+
+        function displayContent(itemId, buttonId) {
+            const items = document.querySelectorAll('.item');
+            const buttons = document.querySelectorAll('.option span');
+
+            items.forEach(item => {
+                item.classList.add('hidden');
+            });
+
+            document.getElementById(itemId).classList.remove('hidden');
+
+            buttons.forEach(button => {
+                button.classList.remove('active');
+                button.querySelector('p').classList.remove('text-black');
+            });
+
+            document.getElementById(buttonId).querySelector('p').classList.add('text-black');
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            displayContent('item1', 'button1');
+        });
+    </script>
+
+
+</body>
+
+</html>
